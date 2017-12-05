@@ -1,6 +1,12 @@
 
 public class PuzzleRotations {
 
+	/** 
+	 * 
+	 * This section is for horizontal clockwise and counter-clockwise rotations.
+	 * 
+	 */
+	
 	//Rotates the top row of the cube counter-clockwise.
 	public static RubiksCube rotateTopRowCounterClockwiseOnce(RubiksCube cube) {
 		
@@ -41,6 +47,7 @@ public class PuzzleRotations {
 		
 		return cubeNew;
 	}
+	
 	
 	//Rotates the top row of the cube clockwise.
 	public static RubiksCube rotateTopRowClockwiseOnce(RubiksCube cube) {
@@ -113,6 +120,7 @@ public class PuzzleRotations {
 		return cubeNew;
 	}
 	
+	
 	//Rotates the middle row of the cube clockwise.
 	public static RubiksCube rotateMiddleRowClockwiseOnce(RubiksCube cube) {
 			
@@ -140,6 +148,7 @@ public class PuzzleRotations {
 		
 		return cubeNew;
 	}
+	
 	
 	//Rotates the bottom row of the cube counter-clockwise.
 	public static RubiksCube rotateBottomRowCounterClockwiseOnce(RubiksCube cube) {
@@ -181,6 +190,7 @@ public class PuzzleRotations {
 		return cubeNew;
 	}
 	
+	
 	//Rotates the bottom row of the cube clockwise.
 	public static RubiksCube rotateBottomRowClockwiseOnce(RubiksCube cube) {
 		
@@ -217,6 +227,66 @@ public class PuzzleRotations {
 		cubeNew.side6[2][0] = cube.side2[2][0];
 		cubeNew.side6[2][1] = cube.side2[2][1];
 		cubeNew.side6[2][2] = cube.side2[2][1];
+		
+		return cubeNew;
+	}
+	
+	
+	/** 
+	 * 
+	 * This section is for vertical forward and backward rotations.
+	 * 
+	 */
+	
+	//Rotates the left column of the cube forward.
+	public static RubiksCube rotateLeftColumnForwardOnce(RubiksCube cube) {
+		
+		RubiksCube cubeNew = RubiksCubeStandardOps.rubiksCubeCopy(cube);
+		
+		return cubeNew;
+	}
+	
+	
+	//Rotates the middle row of the cube forward.
+	public static RubiksCube rotateMiddleColumnForwardOnce(RubiksCube cube) {
+		
+		RubiksCube cubeNew = RubiksCubeStandardOps.rubiksCubeCopy(cube);
+		
+		return cubeNew;
+	}
+	
+	
+	//Rotates the middle row of the cube forward.
+	public static RubiksCube rotateRightColumnForwardOnce(RubiksCube cube) {
+		
+		RubiksCube cubeNew = RubiksCubeStandardOps.rubiksCubeCopy(cube);
+		
+		return cubeNew;
+	}
+	
+	
+	//Rotates the left column of the cube backward.
+	public static RubiksCube rotateLeftColumnBackwardOnce(RubiksCube cube) {
+		
+		RubiksCube cubeNew = RubiksCubeStandardOps.rubiksCubeCopy(cube);
+		
+		return cubeNew;
+	}
+	
+	
+	//Rotates the middle row of the cube backward.
+	public static RubiksCube rotateMiddleColumnBackwardOnce(RubiksCube cube) {
+		
+		RubiksCube cubeNew = RubiksCubeStandardOps.rubiksCubeCopy(cube);
+		
+		return cubeNew;
+	}
+	
+	
+	//Rotates the middle row of the cube backward.
+	public static RubiksCube rotateRightColumnBackwardOnce(RubiksCube cube) {
+		
+		RubiksCube cubeNew = RubiksCubeStandardOps.rubiksCubeCopy(cube);
 		
 		return cubeNew;
 	}
