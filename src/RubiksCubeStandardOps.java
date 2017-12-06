@@ -97,6 +97,8 @@ public class RubiksCubeStandardOps {
 		//cube = PuzzleRotations.rotateBottomRowCounterClockwiseOnce(cube);
 		//cube = PuzzleRotations.rotateBottomRowClockwiseOnce(cube);
 		
+		cube = PuzzleRotations.rotateLeftColumnForwardOnce(cube);
+		
 		printRubiksCube(cube);
 	}
 	

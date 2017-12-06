@@ -254,12 +254,26 @@ public class PuzzleRotations {
 		cubeNew.side2[2][0] = cube.side1[2][0];
 		
 		//rotate side3
-		
+		cubeNew.side3[0][0] = cube.side2[0][0];
+		cubeNew.side3[1][0] = cube.side2[1][0];
+		cubeNew.side3[2][0] = cube.side2[2][0];
 		
 		//rotate side4
-		
+		cubeNew.side4[0][2] = cube.side3[2][0];
+		cubeNew.side4[1][2] = cube.side3[1][0];
+		cubeNew.side4[2][2] = cube.side3[0][0];
 		
 		//rotate side6
+		cubeNew.side6[0][0] = cube.side6[2][0];
+		cubeNew.side6[0][1] = cube.side6[1][0];
+		cubeNew.side6[0][2] = cube.side6[0][0];
+		
+		cubeNew.side6[1][0] = cube.side6[2][1];
+		cubeNew.side6[1][2] = cube.side6[0][1];
+		
+		cubeNew.side6[2][0] = cube.side6[2][2];
+		cubeNew.side6[2][1] = cube.side6[1][2];
+		cubeNew.side6[2][2] = cube.side6[0][2];
 		
 		return cubeNew;
 	}
@@ -269,6 +283,22 @@ public class PuzzleRotations {
 	public static RubiksCube rotateMiddleColumnForwardOnce(RubiksCube cube) {
 		
 		RubiksCube cubeNew = RubiksCubeStandardOps.rubiksCubeCopy(cube);
+		
+		//rotate side1
+		cubeNew.side1[0][1] = cube.side4[2][1];
+		cubeNew.side1[1][1] = cube.side4[1][1];
+		cubeNew.side1[2][1] = cube.side4[0][1];
+		
+		//rotate side2
+		cubeNew.side2[0][1] = cube.side1[0][1];
+		cubeNew.side2[1][1] = cube.side1[1][1];
+		cubeNew.side2[2][1] = cube.side1[2][1];
+		
+		//rotate side3
+		
+		
+		//rotate side4
+		
 		
 		return cubeNew;
 	}
