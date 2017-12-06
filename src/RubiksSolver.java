@@ -9,7 +9,6 @@ public class RubiksSolver {
 			System.out.println("Here is the solved cube:\n\n");
 			RubiksCubeStandardOps.printRubiksCube(cube);
 		} else {
-			//printRubiksCube(cube);
 			RubiksCubeStandardOps.solveRubiksCube(cube);
 		}
 	}	
