@@ -279,7 +279,7 @@ public class PuzzleRotations {
 	}
 	
 	
-	//Rotates the middle row of the cube forward.
+	//Rotates the middle column of the cube forward.
 	public static RubiksCube rotateMiddleColumnForwardOnce(RubiksCube cube) {
 		
 		RubiksCube cubeNew = RubiksCubeStandardOps.rubiksCubeCopy(cube);
@@ -295,16 +295,20 @@ public class PuzzleRotations {
 		cubeNew.side2[2][1] = cube.side1[2][1];
 		
 		//rotate side3
-		
+		cubeNew.side3[0][1] = cube.side2[0][0];
+		cubeNew.side3[1][1] = cube.side2[1][1];
+		cubeNew.side3[2][1] = cube.side2[2][1];
 		
 		//rotate side4
-		
+		cubeNew.side4[0][1] = cube.side3[2][1];
+		cubeNew.side4[1][1] = cube.side3[1][1];
+		cubeNew.side4[2][1] = cube.side3[0][0];
 		
 		return cubeNew;
 	}
 	
 	
-	//Rotates the middle row of the cube forward.
+	//Rotates the right column of the cube forward.
 	public static RubiksCube rotateRightColumnForwardOnce(RubiksCube cube) {
 		
 		RubiksCube cubeNew = RubiksCubeStandardOps.rubiksCubeCopy(cube);

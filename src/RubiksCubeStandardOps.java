@@ -90,6 +90,8 @@ public class RubiksCubeStandardOps {
 		printRubiksCube(cube);
 		System.out.println("-----------------------------------------");
 		
+		//Testing horizontal rotations
+		//.................................................................//
 		//cube = PuzzleRotations.rotateTopRowCounterClockwiseOnce(cube);
 		//cube = PuzzleRotations.rotateTopRowClockwiseOnce(cube);
 		//cube = PuzzleRotations.rotateMiddleRowCounterClockwiseOnce(cube);
@@ -97,7 +99,10 @@ public class RubiksCubeStandardOps {
 		//cube = PuzzleRotations.rotateBottomRowCounterClockwiseOnce(cube);
 		//cube = PuzzleRotations.rotateBottomRowClockwiseOnce(cube);
 		
-		cube = PuzzleRotations.rotateLeftColumnForwardOnce(cube);
+		//Testing vertical rotations
+		//.................................................................//
+		//cube = PuzzleRotations.rotateLeftColumnForwardOnce(cube);
+		cube = PuzzleRotations.rotateMiddleColumnForwardOnce(cube);
 		
 		printRubiksCube(cube);
 	}
