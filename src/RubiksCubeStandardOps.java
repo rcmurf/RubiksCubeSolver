@@ -92,17 +92,22 @@ public class RubiksCubeStandardOps {
 		
 		//Testing horizontal rotations
 		//.................................................................//
-		//cube = PuzzleRotations.rotateTopRowCounterClockwiseOnce(cube);
-		//cube = PuzzleRotations.rotateTopRowClockwiseOnce(cube);
-		//cube = PuzzleRotations.rotateMiddleRowCounterClockwiseOnce(cube);
-		//cube = PuzzleRotations.rotateMiddleRowClockwiseOnce(cube);
-		//cube = PuzzleRotations.rotateBottomRowCounterClockwiseOnce(cube);
-		//cube = PuzzleRotations.rotateBottomRowClockwiseOnce(cube);
+		//cube = PuzzleRotations.rotateTopRowCounterClockwiseOnce(cube); - VALIDATED
+		//cube = PuzzleRotations.rotateTopRowClockwiseOnce(cube); - VALIDATED
+		//cube = PuzzleRotations.rotateMiddleRowCounterClockwiseOnce(cube); - VALIDATED
+		//cube = PuzzleRotations.rotateMiddleRowClockwiseOnce(cube); - VALIDATED
+		//cube = PuzzleRotations.rotateBottomRowCounterClockwiseOnce(cube); - VALIDATED
+		//cube = PuzzleRotations.rotateBottomRowClockwiseOnce(cube); - VALIDATED
+		
 		
 		//Testing vertical rotations
 		//.................................................................//
-		//cube = PuzzleRotations.rotateLeftColumnForwardOnce(cube);
-		cube = PuzzleRotations.rotateMiddleColumnForwardOnce(cube);
+		//cube = PuzzleRotations.rotateLeftColumnForwardOnce(cube); - VALIDATED
+		//cube = PuzzleRotations.rotateLeftColumnBackwardOnce(cube); - VALIDATED
+		//cube = PuzzleRotations.rotateMiddleColumnForwardOnce(cube); - VALIDATED
+		//cube = PuzzleRotations.rotateMiddleColumnBackwardOnce(cube); - VALIDATED
+		//cube = PuzzleRotations.rotateRightColumnForwardOnce(cube); - VALIDATED
+		//cube = PuzzleRotations.rotateRightColumnBackwardOnce(cube); - VALIDATED
 		
 		printRubiksCube(cube);
 	}
