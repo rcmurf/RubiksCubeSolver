@@ -244,9 +244,9 @@ public class PuzzleRotations {
 		RubiksCube cubeNew = RubiksCubeStandardOps.rubiksCubeCopy(cube);
 		
 		//rotate side1
-		cubeNew.side1[0][0] = cube.side4[0][2];
+		cubeNew.side1[0][0] = cube.side4[2][2];
 		cubeNew.side1[1][0] = cube.side4[1][2];
-		cubeNew.side1[2][0] = cube.side4[2][2];
+		cubeNew.side1[2][0] = cube.side4[0][2];
 		
 		//rotate side2
 		cubeNew.side2[0][0] = cube.side1[0][0];
@@ -321,7 +321,7 @@ public class PuzzleRotations {
 		//rotate side2
 		cubeNew.side2[0][2] = cube.side1[0][2];
 		cubeNew.side2[1][2] = cube.side1[1][2];
-		cubeNew.side2[2][2] = cube.side1[1][1];
+		cubeNew.side2[2][2] = cube.side1[2][2];
 		
 		//rotate side3
 		cubeNew.side3[0][2] = cube.side2[0][2];

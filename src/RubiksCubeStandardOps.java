@@ -90,26 +90,18 @@ public class RubiksCubeStandardOps {
 		printRubiksCube(cube);
 		System.out.println("-----------------------------------------");
 		
-		//Testing horizontal rotations
-		//.................................................................//
-		//cube = PuzzleRotations.rotateTopRowCounterClockwiseOnce(cube); - VALIDATED
-		//cube = PuzzleRotations.rotateTopRowClockwiseOnce(cube); - VALIDATED
-		//cube = PuzzleRotations.rotateMiddleRowCounterClockwiseOnce(cube); - VALIDATED
-		//cube = PuzzleRotations.rotateMiddleRowClockwiseOnce(cube); - VALIDATED
-		//cube = PuzzleRotations.rotateBottomRowCounterClockwiseOnce(cube); - VALIDATED
-		//cube = PuzzleRotations.rotateBottomRowClockwiseOnce(cube); - VALIDATED
+		cube = RubiksCubeSolvingAlgorithms.runSolvingAlgorithm(cube);
 		
 		
-		//Testing vertical rotations
-		//.................................................................//
-		//cube = PuzzleRotations.rotateLeftColumnForwardOnce(cube); - VALIDATED
-		//cube = PuzzleRotations.rotateLeftColumnBackwardOnce(cube); - VALIDATED
-		//cube = PuzzleRotations.rotateMiddleColumnForwardOnce(cube); - VALIDATED
-		//cube = PuzzleRotations.rotateMiddleColumnBackwardOnce(cube); - VALIDATED
-		//cube = PuzzleRotations.rotateRightColumnForwardOnce(cube); - VALIDATED
-		//cube = PuzzleRotations.rotateRightColumnBackwardOnce(cube); - VALIDATED
-		
-		printRubiksCube(cube);
+		if (checkIfCubeIsSolved(cube)) {
+			System.out.println("-----------------------------------------");
+			System.out.println("\nHere is the solved cube:\n\n");
+			printRubiksCube(cube);
+		}else {
+			System.out.println("-----------------------------------------");
+			System.out.println("\nCube can't be solved with current algorithm!\n\n");
+			printRubiksCube(cube);
+		}
 	}
 	
 	//Checks to see if the Rubik's Cube is solved.
@@ -125,6 +117,7 @@ public class RubiksCubeStandardOps {
 		if (!solved) {
 			return solved;
 		}
+		
 		solved = checkIfSideIsAllTheSameColor(cube.side3);
 		if (!solved) {
 			return solved;
@@ -224,6 +217,52 @@ public class RubiksCubeStandardOps {
 		
 		return copiedSide;
 		
+	}
+	
+	//Checks to see if modified cube is equal to the original cube.
+	public static Boolean checkIfCubesAreEqual(RubiksCube originalCube, RubiksCube newCube) {
+		
+		Boolean areEqual = true;
+		
+		if (!checkIfOneCubeSideAreEqual(originalCube.side1, newCube.side1)) {
+			return false;
+		}
+		
+		if (!checkIfOneCubeSideAreEqual(originalCube.side2, newCube.side2)) {
+			return false;
+		}
+		
+		if (!checkIfOneCubeSideAreEqual(originalCube.side3, newCube.side3)) {
+			return false;
+		}
+		
+		if (!checkIfOneCubeSideAreEqual(originalCube.side3, newCube.side3)) {
+			return false;
+		}
+		
+		if (!checkIfOneCubeSideAreEqual(originalCube.side3, newCube.side3)) {
+			return false;
+		}
+		
+		if (!checkIfOneCubeSideAreEqual(originalCube.side3, newCube.side3)) {
+			return false;
+		}
+		
+		return areEqual;
+	}
+	
+	public static Boolean checkIfOneCubeSideAreEqual(String[][] originalCubeSide, String[][] newCubeSide) {
+		Boolean areEqual = true;
+		
+		for (int i = 0; i < 3; i++) {
+			for (int j = 0; j < 3; j++) {
+				if (originalCubeSide[i][j] != newCubeSide[i][j]) {
+					areEqual = false;
+				}
+			}
+		}
+		
+		return areEqual;
 	}
 	
 }
